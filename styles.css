@@ -9,7 +9,11 @@
     --darkClrThree : hsl(215, 32%, 27%);
     --white : hsl(0, 0%, 100%);
 }
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 body{
     height: 100vh;
     font-family: "Outfit", sans-serif;
@@ -33,6 +37,10 @@ body{
 .card h3{
     color: var(--white);
     cursor: pointer;
+    margin-bottom: 16px;
+}
+.card p{
+    margin-bottom: 24px;
 }
 .card h3:hover{
     color: var(--cyan);
@@ -40,6 +48,7 @@ body{
 .card__img{
     position: relative;
     cursor: pointer;
+    margin-bottom: 16px;
 }
 .card__img:hover .card__overlay{
     opacity: 100%;
