@@ -32,7 +32,7 @@ body{
     width: 300px;
     border-radius: 16px;
     overflow: hidden;
-    padding: 24px;
+    padding: 20px;
 }
 .card h3{
     color: var(--white);
