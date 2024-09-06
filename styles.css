@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root{
+    --softBlue : hsl(215, 51%, 70%);
+    --cyan : hsl(178, 100%, 50%);
+    --cyanTransparent : hsla(178, 100%, 50%, 0.493);
+    --darkClrOne : hsl(217, 54%, 11%);
+    --darkBClrTwo : hsl(216, 50%, 16%);
+    --darkClrThree : hsl(215, 32%, 27%);
+    --white : hsl(0, 0%, 100%);
+}
+
+body{
+    height: 100vh;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 18px;
+    background-color: var(--darkClrOne);
+    color: var(--softBlue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    background-color: var(--darkBClrTwo);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 300px;
+    border-radius: 16px;
+    overflow: hidden;
+    padding: 24px;
+}
+.card h3{
+    color: var(--white);
+    cursor: pointer;
+}
+.card h3:hover{
+    color: var(--cyan);
+}
+.card__img{
+    position: relative;
+    cursor: pointer;
+}
+.card__img:hover .card__overlay{
+    opacity: 100%;
+}
+.card__overlay {
+    width: 100%;
+    height: fit-content;
+    border-radius: 12px;
+    background-color: var(--cyanTransparent);
+    opacity: 0;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity .2s ease-in;
+    
+}
+.card__overlay img {
+    width: 32px;
+    object-fit: none;
+}
+.card .card__img img{
+    width: 100%;
+    border-radius: 12px;
+}
+.card__details{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--darkClrThree);
+}
+.card__details span{
+    font-size: 16px;
+}
+.card__price span{
+    font-weight: 600;
+    color: var(--cyan);
+}
+.card__author{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 16px;
+    margin-top: 16px;
+}
+.card__price, .card__days{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    line-height: 1;
+}
+.card__author__avatar{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+    background-image: url(./images/image-avatar.png);
+    background-size: cover;
+}
+.card__author span a{
+    text-decoration: none;
+    color: var(--white);
+}
+.card__author span a:hover{
+    color: var(--cyan);
+}
